@@ -1,204 +1,124 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kunwoo Kim</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f9fafb;
-            color: #4c4c4c;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #ddd;
-        }
-
-        nav a {
-            margin-left: 1rem;
-            text-decoration: none;
-            color: #4c4c4c;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-            color: #888888;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4c4c4c;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #888888;
-        }
-
-        .hero {
-        text-align: center;
-        padding: 100px 20px;
-        background: #3F5EFB;
-        background: linear-gradient(180deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
-    }
-
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .hero p {
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-            color: #ffffff;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: #1e85f7;
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background: #0c4b94;
-        }
-
-        section {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .projects {
-            display: grid;
-            gap: 20px;
-        }
-
-        .project-card {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            color: #4c4c4c;
-            border: 1px solid #ddd;
-        }
-
-        .contact-icons a {
-            margin: 0 10px;
-            font-size: 1.5rem;
-            color: #4c4c4c;
-            text-decoration: none;
-        }
-
-        .contact-icons a:hover {
-            color: #888888;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            color: #b0b0b0;
-            border-top: 1px solid #ddd;
-        }
-    </style>
+    <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
-
-    <header>
+    <header class="navbar">
         <nav>
-            <a href="#about">소개</a>
-            <a href="#projects">프로젝트</a>
-            <a href="#contact">연락처</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h2><span class="desktop-text">안녕하세요, 저는 김건우입니다 👋</span><span class="mobile-text">안녕하세요<br>저는 김건우입니다 👋</span></h2>
-        <p>창의적이고 성장해가는 주니어 소프트웨어 개발자이며<br>자율주행자동차 개발자를 꿈꾸고 있습니다</p>
-        <a href="https://buymeacoffee.com/aidengoldkr" class="btn">커피 사주기</a>
-    </section>
-    
-
-    <section id="edu" style="margin-bottom: -10px; padding-bottom: 0px;">
-        <h1 style="font-size: 2.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; margin-bottom: 1.5rem;">🎓 다닌 곳</h1>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1;">
-            <a href="https://dankook.sen.hs.kr/">단국대학교부속소프트웨어고등학교</a> 재학
-        </p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1;">
-            <a href="https://ipceo.kaist.ac.kr/">KAIST IP 영재기업인교육원</a> 14기 수료
-        </p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1;">
-            <a href="https://www.ip-edu.net/home/kor/contents.do?menuPos=1">구리남양주교육청부설 도농발명교육센터</a> 수료
-        </p>
-    </section>
-    
-    <section id="prizes" style="margin-bottom: -10px; padding-bottom: 0px;">
-        <h1 style="font-size: 2.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; margin-bottom: 1.5rem;">🏆 수상이력</h1>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2017 전국어린이코딩경진대회 블록코딩부분 우수상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2020 구리남양주교육지원청 학생과학발명품경진대회 동상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2021 과학기술정보통신부장관 과학의날 상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2021 경기도교육감 경기도학생과학발명품경진대회 우수상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2022 구리남양주교육지원청 학생과학발명품경진대회 금상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2022 한국과학교육단체총연합회 한국과학창의력대회 동상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2022 한국발명진흥회 특허청 YIP 아이디어 프로그램 수료 및 장려상</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.6; font-weight: 500;">2023 KAIST IP 영재기업인 교육원 7월 집중교육 미래기술 팀프로젝트 우수상</p>
-    </section>
-    
-    <section id="others" style="margin-bottom: -10px; padding-bottom: 0px;">
-        <h1 style="font-size: 2.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; margin-bottom: 1.5rem;">📝 그 외</h1>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1; font-weight: 500;">Cos Pro Python 2급 자격증</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1; font-weight: 500;">트리즈전문가 1 수준 자격증</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1; font-weight: 500;">특허출원 8건</p>
-        <p style="font-size: 1.2rem; font-family: 'Spoqa Han Sans Neo', 'sans-serif'; line-height: 1.1; font-weight: 500;">특허등록 1건</p>
-    </section>
-    
-    
-    
-    
-    
-
-    <section id="projects">
-        <h3>주요 프로젝트</h3>
-        <div class="projects">
-            <div class="project-card">
-                <h2>따릉이 길찾기 챗봇</h2>
-                <p>서울시 공유자전거 따릉이를 이용한 길찾기 서비스를 제공하는 카카오톡 챗봇입니다, 파이썬과 AWS를 통해 개발했습니다.</p>
-                <a href="https://github.com/aidengoldkr/Ddareungi-Navigation-Kakao-ChatBot" class="btn">자세히 보기</a>
-            </div>
-            <div class="project-card">
-                <h4>Comming soon</h4>
-                <p>-.</p>
-                <a href="" class="btn">자세히 보기</a>
-            </div>
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1><hh>혁신</hh>을 추구하는<br><span>프로그래밍을 합니다</span></h1>
+            <p>김건우, 단국대학교부속소프트웨어고등학교 6기</p>
+            <a href="https://buymeacoffee.com/aidengoldkr" class="btn">Buy me a Coffee</a>
         </div>
     </section>
 
-    <section id="contact" style="text-align:center;">
-        <h3>연락처</h3>
-        <p>아래 채널을 통해 언제든지 연락주세요!</p>
+    
+    <section id="portfolio" class="projects">
+      <h2>Projects</h2>
+    <div class="grid">
+      <div class="card" data-url="https://github.com/aidengoldkr/Ddareungi-Navigation-Kakao-ChatBot" data-target="_blank">
+        <h3>따릉이 길찾기 챗봇</h3>
+        <p>서울시 공유자전거 따릉이를 이용한 길찾기<br>서비스 카카오톡 챗봇</p>
+      </div>
+      <div class="card">
+        <h3>Witch</h3>
+        <p>판타지 타워 디펜스 게임<br>파이프라인 관리를 맡았습니다</p>
+      </div>
+      <div class="card">
+        <h3>Safe Ground</h3>
+        <p>Google Maps 기반 생활안전사고<br>추적 어플리케이션</p>
+      </div>
+      <div class="card">
+        <h3>ICAROS Web</h3>
+        <p>학생 중심 항공우주 연구 조직 ICAROS<br>공식 웹사이트</p>
+      </div>
+      <div class="card">
+        <h3>ESSENTIA Science Web</h3>
+        <p>ESSENTIA 과학회 공식 웹사이트</p>
+      </div>
+      <div class="card">
+        <h3>OBD-II 데이터 테스터</h3>
+        <p>차량용 OBD-II 스캐너로부터 데이터를 받아<br>실시간으로 시각화하는 툴</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills" class="skill">
+    <h2>Skill-Set</h2>
+    <div class="grid">
+      <div class="skill-img"><img src="asset/c++.png" alt=""></div>
+      <div class="skill-img"><img src="asset/python.png" alt=""></div>
+      <div class="skill-img"><img src="asset/html.png" alt=""></div>
+      <div class="skill-img"><img src="asset/css.png" alt=""></div>
+      <div class="skill-img"><img src="asset/flutter.png" alt=""></div>
+      <div class="skill-img"><img src="asset/aws.png" alt=""></div>
+    </div>
+  </section>
+
+  <section id="prizes" class="prizes">
+    <div class="prizes-wrap">
+      <nav class="prize-tabs" role="tablist" aria-label="Profile tabs">
+        <button class="tab active" data-target="tab-education" role="tab" aria-selected="true">다닌곳</button>
+        <button class="tab" data-target="tab-awards" role="tab" aria-selected="false">수상 이력</button>
+        <button class="tab" data-target="tab-cert-other" role="tab" aria-selected="false">자격증 및 기타</button>
+      </nav>
+
+      <div class="prize-panels">
+        <div id="tab-education" class="panel active" role="tabpanel">
+          <ul class="plain-list">
+            <li><strong>남양주도곡초등학교</strong> 졸업</li>
+            <li><strong>덕소중학교</strong> 졸업</li>
+            <li><strong>단국대학교부속소프트웨어고등학교</strong> 재학 (6기)</li>
+            <li><strong>구리남양주교육청 부설 도농초등학교 발명교육센터</strong> 수료</li>
+            <li><strong>KAIST IP 영재기업인 교육원</strong> 14기 수료</li>
+            <li><strong>특허청 청소년 발명기자단</strong> 16~17기</li>
+            
+          </ul>
+        </div>
+
+        <div id="tab-awards" class="panel" role="tabpanel">
+          <ul class="plain-list">
+            <li><strong>2020</strong> 구리남양주교육지원청 학생과학발명품 경진대회 — 동상</li>
+            <li><strong>2021</strong> 과학기술정보통신부장관 과학의 날 상</li>
+            <li><strong>2021</strong> 경기도교육감 경기도학생과학발명품경진대회 — 우수상</li>
+            <li><strong>2022</strong> 구리남양주교육지원청 학생과학발명품경진대회 — 금상</li>
+            <li><strong>2022</strong> 한국과학교육단체총연합회 한국과학창의력대회 — 동상</li>
+            <li><strong>2022</strong> 한국발명진흥회·특허청 YIP 청소년 발명가 프로그램 — 수료 및 장려상</li>
+            <li><strong>2025</strong> 아산유스프러너 데모데이 — 부스부분 장려상, 피칭부분 우수상</li>
+            <li><strong>2025</strong> 한양대 ERICA GAME 코딩대회 — 우수상</li>
+          </ul>
+        </div>
+
+        <div id="tab-cert-other" class="panel" role="tabpanel">
+          <ul class="plain-list">
+            <li><strong>Cos Pro</strong> Python 1급</li>
+            <li><strong>트리즈전문가</strong> 1수준 자격증</li>
+            <li><strong>특허출원</strong> 10건</li>
+            <li><strong>특허등록</strong> 1건</li>
+            <li><strong>2023</strong>KAIST IP 영재기업인 교육원 주최 글로벌 기업가정신 연수 참여</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="text-align:center;">
+        <h3>Contact</h3>
         <div class="contact-icons">
             <a href="mailto:aidengoldkr@gmail.com" class="icon email"></a>
             <a href="https://www.instagram.com/kw_k.9119" target="_blank" class="icon instagram"></a>
@@ -208,12 +128,14 @@
         
         
         </div>
-    </section>
+  </section>
 
     <footer>
         &copy; 2025 김건우. All rights reserved.
     </footer>
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
+

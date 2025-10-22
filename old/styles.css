@@ -1,0 +1,322 @@
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('./fonts/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('./fonts/SpoqaHanSansNeo-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('./fonts/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('./fonts/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url('./fonts/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Spoqa Han Sans Neo', Arial, sans-serif;
+    background: #f9fafb;
+    color: #4c4c4c;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #4c4c4c;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #888888;
+}
+
+.hero_main {
+    text-align: center;
+    padding: 100px 20px;
+    background: #3F5EFB;
+    background: linear-gradient(180deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+
+.hero_main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4c4c4c;
+}
+
+.hero_main p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #b0b0b0;
+}
+
+.hero_about {
+    text-align: center;
+    padding: 100px 20px;
+    background: #3F5EFB;
+    background: linear-gradient(180deg, rgb(63, 251, 63) 0%, rgb(252, 155, 70) 100%);
+}
+
+
+.hero_about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4c4c4c;
+}
+
+.hero_about p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #b0b0b0;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #0091ff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #005799;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tight-section {
+    margin-bottom: 5px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.edu-entry, .prize-entry {
+    font-size: 1.2rem;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.projects {
+    display: grid;
+    gap: 20px;
+}
+
+.page {
+    display: grid;
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #4c4c4c;
+    border: 1px solid #ddd;
+}
+
+.page-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #4c4c4c;
+    border: 1px solid #ddd;
+}
+
+.project-card h2 {
+    margin-top: 3px; /* 제목을 위로 올리기 위한 마진 감소 */
+    margin-bottom: 8px;  /* 제목 아래 여백 축소 */
+}
+
+.project-card p {
+    margin-top: 0;  /* 문단 위 여백 제거 */
+    margin-bottom: 20px;  /* 설명 아래 여백을 늘림 */
+}
+
+.project-card .btn {
+    margin-top: 5px; /* 버튼 위쪽 여백 추가 */
+}
+
+.contact-icons a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #4c4c4c;
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #888888;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    border-top: 1px solid #ddd;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    text-indent: -9999px; /* 텍스트 숨김 */
+}
+
+/* 각각의 아이콘 이미지 지정 */
+.icon.email {
+    background-image: url('./icons/gmail.png');
+}
+
+.icon.instagram {
+    background-image: url('./icons/instagram.png');
+}
+
+.icon.github {
+    background-image: url('./icons/github.png');
+}
+
+.icon.backjoon {
+    background-image: url('./icons/code.png');
+}
+
+
+/* 호버 효과 예시 */
+.icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* 기본은 PC용으로 (모바일은 숨김) */
+.mobile-text {
+    display: none;
+}
+.desktop-text {
+    display: inline;
+}
+
+/* 모바일용 (화면 폭 600px 이하) */
+@media (max-width: 600px) {
+    .mobile-text {
+        display: inline;
+    }
+    .desktop-text {
+        display: none;
+    }
+}
+
+/* 추가된 CSS - 기존 HTML의 <style>에서 복사됨 */
+
+a {
+    text-decoration: none;
+    color: #4c4c4c;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #888888;
+}
+
+.hero_main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* hero 내에서만 흰색 텍스트 */
+}
+
+.hero_main p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #ffffff; /* hero 내에서만 흰색 텍스트 */
+}
+
+.hero_about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff; /* hero 내에서만 흰색 텍스트 */
+}
+
+.hero_about p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    color: #ffffff; /* hero 내에서만 흰색 텍스트 */
+}
+
+section {
+  margin-bottom: -10px;
+  padding-bottom: 0px;
+}
+
+section h1 {
+  font-size: 2.2rem;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  font-size: 1.2rem;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+}
+
+#edu p,
+#others p {
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+#prizes p {
+  line-height: 1.6;
+  font-weight: 500;
+}
