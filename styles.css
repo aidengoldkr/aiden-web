@@ -127,19 +127,6 @@ body {
   background: var(--primary);
 }
 
-.skill {
-  padding: 80px 10%;
-}
-.skill h2 {
-  font-size: 28px;
-  margin-bottom: 40px;
-}
-.skill h2 span {
-  color: var(--primary);
-  margin-left: 10px;
-  border-bottom: 3px solid var(--primary);
-}
-
 .projects {
   padding: 80px 10%;
 }
@@ -248,6 +235,20 @@ body {
   color: var(--card-text);
 }
 
+.skill {
+  padding: 80px 10%;
+}
+.skill h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+.skill h2 span {
+  color: var(--primary);
+  margin-left: 10px;
+  border-bottom: 3px solid var(--primary);
+}
+
+
 .skill .grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -265,6 +266,50 @@ body {
   height: auto;
   object-fit: cover;
 }
+
+/* 🎆 각 기술 아이콘에 홀로그램 효과 */
+.skill-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-img img {
+  width: 100px;
+  height: auto;
+  transition: all 0.6s ease;
+  filter: drop-shadow(0 0 5px rgba(0,255,255,0.3));
+}
+
+/* ✨ 이미지 위에 빛이 스치는 효과 */
+.skill-img::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(0,255,255,0.5),
+    transparent 70%
+  );
+  transform: translateX(-100%) rotate(25deg);
+  opacity: 0;
+  transition: all 0.8s ease;
+  pointer-events: none;
+}
+
+
+
+.skill-img:hover img {
+  filter: drop-shadow(0 0 15px #0ff) brightness(1.2);
+  transform: scale(1.05);
+}
+
+
 
 /* Contact */
 .contact {
