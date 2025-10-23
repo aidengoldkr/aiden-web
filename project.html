@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="styles_project.css" />
+</head>
+<body>
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html" class="active">Projects</a></li>
+        <li><a href="index.html#skill">Skills</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>Projects</h1>
+    </div>
+  </section>
+  
+  <section class="project-list">
+    <div class="sort-menu">
+      <label>정렬:</label>
+      <select id="sortOption">
+        <option value="size">규모 순</option>
+        <option value="date">시간 순</option>
+      </select>
+    </div>
+
+    <div class="projects" id="projectContainer">
+      <div class="project-card" data-size="5" data-date="2024-11-01" ct="app">
+        <img src="asset/bikechatbot.png" alt="Project 1">
+        <div class="project-info">
+          <h2>따릉이 길찾기 챗봇</h2>
+          <p>서울시 공유자전거 따릉이를 이용한 길찾기 서비스를 제공하는 카카오톡 챗봇입니다<br>Python, AWS</p>
+        </div>
+        <div class="project-details">
+            <p>
+            서울시 공유자전거 따릉이를 이용해 최적 경로를 안내하는 카카오톡 챗봇 서비스입니다.
+            사용자의 현재 위치를 기반으로 인근 대여소를 탐색하고, 대여 및 반납 가능 상태를 실시간으로 제공합니다.
+            </p>
+            <div class="detail-images">
+                <img src="asset/bike_diagram.png" alt="diagram">
+                <img src="asset/bike_chat.png" alt="chat example">
+            </div>
+        </div>
+    </div>  
+
+      <div class="project-card" data-size="5" data-date="2025-10-14" ct="app">
+        <img src="asset/safeground.png" alt="Project 2">
+        <div class="project-info">
+          <h2>Safe Ground</h2>
+          <p>Google Maps 기반 생활안전사고 추적 어플리케이션<br>Flutter, Dart</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-size="4" data-date="2025-08-13" ct="game">
+        <img src="asset/witch.png" alt="Project 3">
+        <div class="project-info">
+          <h2>Witch</h2>
+          <p>판타지 타워 디펜스 게임<br>Python</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-size="3" data-date="2025-10-23" ct="web">
+        <img src="asset/icaros.jpg" alt="Project 3">
+        <div class="project-info">
+          <h2>ICAROS 홈페이지<br>HTML, CSS, JS</h2>
+          <p>학생 중심 항공우주 연구 조직 ICAROS 공식 웹사이트</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-size="3" data-date="2025-10-18" ct="web">
+        <img src="asset/essentia.png" alt="Project 3">
+        <div class="project-info">
+          <h2>ESSENTIA Science 홈페이지</h2>
+          <p>ESSENTIA 과학회 공식 웹사이트<br>HTML, CSS, JS</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-size="3" data-date="2025-10-24" ct="web">
+        <img src="asset/com.jpg" alt="Project 3">
+        <div class="project-info">
+          <h2>포트폴리오 웹 사이트</h2>
+          <p>지금 보고 계신 이 사이트<br>HTML, CSS, JS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="particles.js"></script>
+</body>
+</html>

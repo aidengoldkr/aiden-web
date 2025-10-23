@@ -151,3 +151,66 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.getElementById('sortOption').addEventListener('change', function () {
+  const container = document.getElementById('projectContainer');
+  const cards = Array.from(container.children);
+  const sortBy = this.value;
+
+  cards.sort((a, b) => {
+    if (sortBy === 'size') {
+      return Number(a.dataset.size) - Number(b.dataset.size);
+    } else if (sortBy === 'date') {
+      return new Date(b.dataset.date) - new Date(a.dataset.date);
+    }
+  });
+
+  cards.forEach(card => container.appendChild(card));
+});
+
+const cards = document.querySelectorAll(".project-card");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+cards.forEach(card => observer.observe(card));
+
+// --- 정렬 기능 ---
+const projectList = document.getElementById("projectList");
+const sortSizeBtn = document.getElementById("sort-size");
+const sortTimeBtn = document.getElementById("sort-time");
+
+function sortProjects(type) {
+  const projects = Array.from(projectList.children);
+  projects.sort((a, b) => {
+    if (type === "size") return b.dataset.size - a.dataset.size;
+    else if (type === "time") return new Date(b.dataset.time) - new Date(a.dataset.time);
+  });
+  projectList.innerHTML = "";
+  projects.forEach(p => projectList.appendChild(p));
+}
+
+sortSizeBtn.addEventListener("click", () => sortProjects("size"));
+sortTimeBtn.addEventListener("click", () => sortProjects("time"));
+
+// 정렬 기능 (이미 있는 코드 뒤에 추가)
+const sortSelect = document.getElementById('sortOption');
+const projectContainer = document.getElementById('projectContainer');
+
+sortSelect.addEventListener('change', () => {
+  const cards = Array.from(projectContainer.querySelectorAll('.project-card'));
+  const option = sortSelect.value;
+
+  cards.sort((a, b) => {
+    if (option === 'size') {
+      return b.dataset.size - a.dataset.size;
+    } else if (option === 'date') {
+      return new Date(b.dataset.date) - new Date(a.dataset.date);
+    }
+  });
+
+  cards.forEach(card => projectContainer.appendChild(card));
+});
