@@ -385,6 +385,10 @@ body {
     color: #888888;
 }
 
+.uhgro {
+  display: none;
+}
+
 footer {
     text-align: center;
     padding: 20px;
