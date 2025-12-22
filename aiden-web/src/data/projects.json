@@ -4,7 +4,7 @@
     "title": "따릉이 길찾기 챗봇",
     "description": "서울시 공공자전거 따릉이 이용자를 위한 길찾기/카카오톡 챗봇 서비스",
     "tech": ["Python", "AWS"],
-    "image": "/asset/bikechatbot.png",
+    "image": "asset/bikechatbot.png",
     "date": "2024-11-01",
     "url": "https://github.com/aidengoldkr/Ddareungi-Navigation-Kakao-ChatBot",
     "details": "서울시 공공자전거 따릉이를 이용해 최적 경로를 안내하는 카카오톡 챗봇 서비스입니다. 네이버 맵 기반으로 추천 경로를 제공하고, 잔여대수 정보까지 실시간으로 제공합니다."
@@ -14,7 +14,7 @@
     "title": "Safe Ground",
     "description": "Google Maps 기반 생활안전사고 추적 애플리케이션",
     "tech": ["Flutter", "Dart"],
-    "image": "/asset/safeground.png",
+    "image": "asset/safeground.png",
     "url" : null,
     "details" : "공공데이터(Open API)를 시각화하여 누구나 쉽게 접근 가능한 생활안전 플랫폼으로, Fluuter SDK를 이용한 Android 기반 애플리케이션 입니다",
     "date": "2025-11-04"
@@ -24,7 +24,7 @@
     "title": "Witch",
     "description": "Pygame기반 판타지 전략 디펜스 게임",
     "tech": ["Python", "Git"],
-    "image": "/asset/witch.png",
+    "image": "asset/witch.png",
     "url" : null,
     "details" : "아이를 찾아 숲속으로 들어간 소녀, 그리고 그녀의 마법 정령들 | Pygame기반 판타지 전략 디펜스 게임 Witch 입니다. 총 3명의 팀원과 함께 여름방학동안 진행한 프로젝트로 저는 전체 파이프라인 관리와 Git 형상관리, 데이터 구조화를 주로 맡았습니다.",
     "date": "2025-09-08"
@@ -34,7 +34,7 @@
     "title": "ICAROS Web",
     "description": "학생 중심 항공우주 연구 조직 ICAROS 공식사이트",
     "tech": ["React"],
-    "image": "/asset/icaros.png",
+    "image": "asset/icaros.png",
     "url" : "https://icaros.kr",
     "details" : "학생 중심 항공우주 연구 조직 ICAROS에 참여하여, 펀딩 겸 랜딩페이지 역할을 할 공식 홈페이지를 제작하였습니다. React 라이브러리를 이용하여 제작했습니다",
     "date": "2025-12-13"
@@ -44,7 +44,7 @@
     "title": "ICX Simulator",
     "description": "ICAROS의 로켓 ICX 시리즈 웹 기반 시뮬레이터",
     "tech": ["React","Threejs","Blender"],
-    "image": "/asset/icx.png",
+    "image": "asset/icx.png",
     "url" : "https://simulate-icaros.netlify.app/",
     "details" : "ICAROS에서 설계한 KNSB 모델로켓 ICX 시리즈에 대한 시뮬레이터를 제작했습니다. Three.js 기반으로 제작했으며, Fusion360에 추출한 FBX 파일을 Blender에서 다듬어 GLB로 추출 후 사용하였습니다",
     "date": "2025-12-22"
@@ -54,7 +54,7 @@
     "title": "OBD-II 통신 테스터",
     "description": "차량 OBD-II 스캐너로 받은 데이터를 실시간으로 시각화",
     "tech": ["Python","python-OBD"],
-    "image": "/asset/obd.png",
+    "image": "asset/obd.png",
     "url" : "https://www.youtube.com/watch?v=lWJn71iuwEQ",
     "details" : "차량의 OBD-II 포트를 통해 CAN 프로토콜을 통한 통신을 추출하고 시각화한 프로젝트 입니다. 정보통신 교과의 탐구발표로 준비했으며, Python 기반의 PyOBD 라이브러리를 사용했습니다",
     "date": "2025-09-09"
@@ -64,7 +64,7 @@
     "title": "aidengoldkr.dev",
     "description": "지금 보고 계신 제 포트폴리오 사이트",
     "tech": ["React"],
-    "image": "/asset/aiden.png",
+    "image": "asset/aiden.png",
     "url" : null,
     "details" : "제 자신을 소개하는 퍼스널 브랜딩 포트폴리오 사이트 입니다. 제 자신의 비전과 꿈을 강조하면서 내용을 구성하였고, 프로젝트나 수상실적 같은 데이터는 외부 JSON을 관리 하였습니다.",
     "date": "2025-12-23"

@@ -3,6 +3,7 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import LogoLoop from './component/LogoLoop.jsx'
 import TextType from './component/textType.jsx'
 import Dock from './component/Dock.jsx';
+import AnimatedList from './component/AnimatedList.jsx';
 
 
 
@@ -95,7 +96,7 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
     
               <TextType
                 as="span"
-                text={[' 혁신을 추구하는', ' 있는거 갔다쓰는 프로그래밍을 하는', ' 개쩌는']}
+                text={[' 혁신을 추구하는', ' 코드짜는 걸 즐기는', ' 새로운 BM을 찾는']}
                 typingSpeed={100}
                 deletingSpeed={60}
                 pauseDuration={3000}
@@ -208,42 +209,32 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
 
           <div className="prize-panels">
             <div id="tab-education" className={`panel ${activeTab === 'education' ? 'active' : ''}`} role="tabpanel">
-              <ul className="plain-list">
-                {educationList.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <AnimatedList
+                items={educationList}
+                displayScrollbar={false}
+                showGradients={false}
+                enableArrowNavigation={false}
+              />
             </div>
 
             <div id="tab-awards" className={`panel ${activeTab === 'awards' ? 'active' : ''}`} role="tabpanel">
-              <ul className="plain-list">
-                {awardList.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <AnimatedList
+                items={awardList}
+                displayScrollbar={false}
+                showGradients={false}
+                enableArrowNavigation={false}
+              />
             </div>
 
             <div id="tab-cert-other" className={`panel ${activeTab === 'cert' ? 'active' : ''}`} role="tabpanel">
-              <ul className="plain-list">
-                {certList.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+              <AnimatedList
+                items={certList}
+                displayScrollbar={false}
+                showGradients={false}
+                enableArrowNavigation={false}
+              />
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="contact" className="contact">
-        <h3>Contact</h3>
-        <div className={`contact-dock dock-appear ${heroVisible ? 'dock-visible' : ''}`}>
-          <Dock 
-            items={snsItems}
-            panelHeight={56}
-            baseItemSize={40}
-            magnification={60}
-            distance={160}
-          />
         </div>
       </section>
 
