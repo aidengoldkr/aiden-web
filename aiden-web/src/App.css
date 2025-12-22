@@ -260,7 +260,7 @@ body {
 
 .hero-dock {
   position: absolute;
-  bottom: 200px;
+  bottom: 180px;
   transform: translateX(-50%);
   width: 100%;
   display: flex;
