@@ -96,7 +96,7 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
     
               <TextType
                 as="span"
-                text={[' 혁신을 추구하는', ' 코드짜는 걸 즐기는', ' 새로운 BM을 찾는']}
+                text={[' 혁신을 추구하는', ' 코딩하는', ' BM을 만드는']}
                 typingSpeed={100}
                 deletingSpeed={60}
                 pauseDuration={3000}
