@@ -1,16 +1,43 @@
-# React + Vite
+﻿# Aiden 웹 포트폴리오 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aiden의 개인 웹 포트폴리오 사이트를 소개하는 문서입니다. 이 저장소는 개인 작품과 활동을 보여주기 위한 '웹 설명서'로, 외부 기여나 배포운영을 위한 문서가 아닙니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  사이트 개요
 
-## React Compiler
+- 목적: 개인 프로젝트, 수상 내역, 기술 및 작업 스타일을 시각적으로 소개하기 위함
+- 성격: 인터랙티브한 애니메이션과 간단한 SPA 라우팅을 활용한 데모/포트폴리오
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  구성(사용자 관점)
 
-## Expanding the ESLint configuration
+- 홈(메인): 시각적 인트로와 핵심 요약
+- 프로젝트: 진행/완료된 프로젝트 목록 및 각 프로젝트 개요
+- 수상(Prizes): 수상 내역 리스트
+- 기타: 간단한 소개와 연락 정보
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> 구체적 페이지 경로와 UI는 `src/` 내 컴포넌트와 라우트에 정의되어 있습니다.
+
+##  디자인 & 인터랙션
+
+- GSAP 기반 애니메이션(로고 루프, 텍스트 타이핑, 클릭 이펙트 등)을 사용하여 시각적 표현 강화
+- 반응형 레이아웃으로 다양한 화면 크기 지원
+- 경량화 목표: 불필요한 외부 의존 최소화
+
+##  콘텐츠 관리(메모)
+
+- 프로젝트와 수상 정보는 `src/data/projects.json` 와 `src/data/prizes.json` 에서 관리됩니다.
+- 이미지나 아이콘은 `public/asset/` 폴더에 추가합니다.
+
+##  주의사항
+
+- 이 저장소는 개인 포트폴리오 설명 목적이며, 외부 기여(컨트리뷰션)나 공식 배포 문서가 아닙니다.
+- 코드나 자산을 재사용할 때에는 원저작자(작성자)에게 문의하세요.
+
+## 연락
+
+- 작성자: Aiden
+
+---
+
+(원하시면 이 README를 영어 버전으로 번역하거나, 각 페이지별 상세 설명을 추가해드리겠습니다.)

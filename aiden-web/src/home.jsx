@@ -78,7 +78,6 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
     { src: "/asset/skill-logo/figma-icon.svg", alt: "Figma" },
 
     { src: "/asset/skill-logo/adobe-photoshop-2.svg", alt: "Adobe Photoshop" },
-    { src: "/asset/skill-logo/adobe-illustrator-cc-3.svg", alt: "Adobe Illustrator" },
     { src: "/asset/skill-logo/adobe-photoshop-lightroom-cc-icon.svg", alt: "Adobe Lightroom" },
     { src: "/asset/skill-logo/premiere-pro-cc.svg", alt: "Adobe Premiere Pro" },
     { src: "/asset/skill-logo/after-effects-1.svg", alt: "Adobe After Effects" },
