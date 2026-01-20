@@ -91,20 +91,16 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
         <div className={`hero-content ${heroVisible ? 'hero-visible' : ''}`}>
           <div className='main-content'>
             <h1>
-              안녕하세요! 저는 
-    
               <TextType
                 as="span"
-                text={[' 혁신을 추구하는', ' 코딩하는', ' BM을 만드는']}
+                text="Innovative Coding"
                 typingSpeed={100}
-                deletingSpeed={60}
                 pauseDuration={3000}
-                loop={true}
+                loop={false}
                 showCursor
-                cursorCharacter="|"
+                cursorCharacter=""
                 className="hero-typed"
               />
-              사람입니다.
             </h1>
             <p>김건우, 단국대학교부속소프트웨어고등학교 6기</p>
           </div>
@@ -123,7 +119,6 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
       <section className='aboutme'>
         <h2>About Me</h2>
         <div className='about-contants'>
-          <img src='asset/profile.jpg' className='profile_img'></img>
           <div className='about-desc'>
             <p className='about-title'>안녕하세요! 주니어 개발자 김건우입니다.</p>
             <p className='about-subtitle'>혁신적인 BM을 설계하고 이를 소프트웨어로 구현하는 것을 즐깁니다</p>
@@ -151,6 +146,7 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
         <p>프론트엔드 부터 클라우드 컴퓨팅, 미디어까지 다양한 기술에 관심이 많습니다</p>
       </section>
 
+      {/*
       <section id="project" className="projects-section">
         <h2>
           Projects - Software
@@ -176,6 +172,7 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
           ))}
         </div>
       </section>
+      */}
 
       <section id="prizes" className="prizes">
         <div className="prizes-wrap">
