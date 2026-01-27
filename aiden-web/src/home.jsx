@@ -234,14 +234,14 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
           <div className='exter-grid'>
             <div
               className='exter-card exter-card--portfolio'
-              onClick={() => alert(lang === 'ko' ? '?? ? ???' : 'Coming soon')}
+              onClick={() => alert(lang === 'ko' ? '준비 중 입니다' : 'Coming soon')}
             >
               <div className='exter-card-title'>{t.portfolioTitle}</div>
               <div className='exter-card-desc'>{t.portfolioDesc}</div>
             </div>
             <div
               className='exter-card exter-card--blog'
-              onClick={() => alert(lang === 'ko' ? '?? ? ???' : 'Coming soon')}
+              onClick={() => alert(lang === 'ko' ? '준비 중 입니다' : 'Coming soon')}
             >
               <div className='exter-card-title'>{t.blogTitle}</div>
               <div className='exter-card-desc'>{t.blogDesc}</div>
