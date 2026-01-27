@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate, useOutletContext } from 'react-router-dom'
 import LogoLoop from './component/LogoLoop.jsx'
 import TextType from './component/textType.jsx'
 import Dock from './component/Dock.jsx';
@@ -10,8 +10,10 @@ import AnimatedList from './component/AnimatedList.jsx';
 function Home({ useParticlesHook, projectData, skillData, educationList, awardList, certList }) {
   const location = useLocation()
   const navigate = useNavigate()
+  const { lang = 'ko', toggleLang } = useOutletContext() ?? {}
   const [activeTab, setActiveTab] = useState('education')
   const [heroVisible, setHeroVisible] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(null)
   const featuredProjects = useMemo(() => projectData.slice(0, 6), [projectData])
   const selectedProject = selectedProjectIndex !== null ? featuredProjects[selectedProjectIndex] : null
@@ -47,6 +49,18 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
     return () => window.clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 800px)')
+    const handleChange = () => setIsMobile(mediaQuery.matches)
+    handleChange()
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
+    }
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
+  }, [])
+
   const projectTechs = (project) => {
     if (!project?.tech) return []
     if (Array.isArray(project.tech)) return project.tech.filter(Boolean)
@@ -71,6 +85,7 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
     { src: "/asset/skill-logo/javascript-1.svg", alt: "JavaScript" },
     { src: "/asset/skill-logo/react-2.svg", alt: "React" },
     { src: "/asset/skill-logo/redux.svg", alt: "Redux" },
+    { src: "/asset/skill-logo/next-js.svg", alt: "Nextjs" },
     { src: "/asset/skill-logo/flutter-logo.svg", alt: "Flutter" },
     { src: "/asset/skill-logo/aws-2.svg", alt: "AWS" },
 
@@ -83,14 +98,62 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
     { src: "/asset/skill-logo/after-effects-1.svg", alt: "Adobe After Effects" },
   ];
 
+  const copy = {
+    ko: {
+      aboutTitle: '안녕하세요! 주니어 개발자 김건우 입니다.',
+      aboutSubtitle: '혁신적인 아이디어를 내고 소프트웨어로 구현하는 것을 즐깁니다',
+      aboutHeading: 'About Me',
+      skillHeading: 'Skill-Set',
+      skillDesc: '프론트엔드부터 클라우드 컴퓨팅, 미디어까지 다양한 분야에 관심이 많습니다.',
+      subHero: '김건우, 단국대학교부속소프트웨어고등학교 (6기)',
+      prizeHeading: 'Education & Awards',
+      eduTitle: 'Education',
+      awardTitle: 'Awards',
+      certTitle: 'Certificates',
+      contactHeading: 'Contact & External',
+      portfolioTitle: 'Portfolio',
+      portfolioDesc: '제가 진행한 프로젝트와 결과물들을 정리한 페이지 입니다.',
+      blogTitle: 'Blog',
+      blogDesc: '제가 배우고 경험한 것을 정리, 분석한 테크블로그 입니다.'
+    },
+    en: {
+      aboutTitle: "Hello! I'm Kunwoo Kim, A junior developer.",
+      aboutSubtitle: 'I enjoy designing innovative ideas and implementing them in software.',
+      aboutHeading: 'About Me',
+      skillHeading: 'Skill-Set',
+      skillDesc: 'From platforms to mobile and media, I handle a broad range of tech.',
+      subHero: 'Kunwoo Kim, Dankook Software High School (6th)',
+      prizeHeading: 'Education & Awards',
+      eduTitle: 'Education',
+      awardTitle: 'Awards',
+      certTitle: 'Certificates',
+      contactHeading: 'Contact & External',
+      portfolioTitle: 'Portfolio',
+      portfolioDesc: 'A portfolio page with my projects and outcomes.',
+      blogTitle: 'Blog',
+      blogDesc: 'A blog for my learning notes and experiences.'
+    }
+  }
+
+  const t = copy[lang] ?? copy.ko
+
+
 
   return (
     <>
-      <section id="home" className="hero">
+        <section id="home" className="hero">
+        <button
+          type="button"
+          className="lang-toggle"
+          onClick={toggleLang}
+          aria-label="Toggle language"
+        >
+          {lang === 'ko' ? 'KR' : 'EN'}
+        </button>
         <div id="particles-home" className="particles-layer" aria-hidden="true" />
         <div className={`hero-content ${heroVisible ? 'hero-visible' : ''}`}>
           <div className='main-content'>
-            <h1>
+            <div className='main-hero'>
               <TextType
                 as="span"
                 text="Innovative Coding"
@@ -98,53 +161,103 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
                 pauseDuration={3000}
                 loop={false}
                 showCursor
-                cursorCharacter=""
+                cursorCharacter={isMobile ? "" : "_"}
                 className="hero-typed"
               />
-            </h1>
-            <p>김건우, 단국대학교부속소프트웨어고등학교 6기</p>
+            </div>
+            <p className='sub-hero'>{t.subHero}</p>
           </div>
         </div>
-        <div className={`hero-dock dock-appear ${heroVisible ? 'dock-visible' : ''}`}>
-          <Dock 
-            items={snsItems}
-            panelHeight={56}
-            baseItemSize={40}
-            magnification={60}
-            distance={160}
-          />
-        </div>
-      </section>
+        </section>
 
-      <section className='aboutme'>
-        <h2>About Me</h2>
-        <div className='about-contants'>
-          <div className='about-desc'>
-            <p className='about-title'>안녕하세요! 주니어 개발자 김건우입니다.</p>
-            <p className='about-subtitle'>혁신적인 BM을 설계하고 이를 소프트웨어로 구현하는 것을 즐깁니다</p>
-            <div className='about-tags'>
-              <a className='birth-tag'># 2009.11.09</a>
-              <a className='mbti-tag'># INTJ</a>
-              <a href="https://dankook.sen.hs.kr/index.do" className='school-tag' target="_blank" rel="noreferrer"># DKSH 6th</a>
-              <a href="https://ipceo.kaist.ac.kr/" className='ipceo-tag' target="_blank" rel="noreferrer"># IP-CEO 14th</a>
+        <section className='aboutme'>
+          <div className='subtitle'>{t.aboutHeading}</div>
+          <div className='about-contants'>
+            <img className='about-img' src='/asset/profile.png'></img>
+            <div className='about-desc'>
+              <p className='about-title'>{t.aboutTitle}</p>
+              <p className='about-subtitle'>{t.aboutSubtitle}</p>
+              <div className='about-tags'>
+                <a className='birth-tag'># 2009.11.09</a>
+                <a className='mbti-tag'># INTJ</a>
+                <a href="https://dankook.sen.hs.kr/index.do" className='school-tag' target="_blank" rel="noreferrer"># DKSH 6th</a>
+                <a href="https://ipceo.kaist.ac.kr/" className='ipceo-tag' target="_blank" rel="noreferrer"># IP-CEO 14th</a>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section id="skills" className="skill">
-        <h2>Skill-Set</h2>
         <div className="skill-grid">
+          <div className='subtitle'>{t.skillHeading}</div>
           <LogoLoop
             logos={logos}
-            speed={60}          // 100 → 60
+            speed={60}        
             logoHeight={48}
             gap={56}
-            pauseOnHover
+            className="logoloop"
           />
+          <p>{t.skillDesc}</p>
         </div>
-        <p>프론트엔드 부터 클라우드 컴퓨팅, 미디어까지 다양한 기술에 관심이 많습니다</p>
-      </section>
+        </section>
+
+        <section className='prize'>
+          <div className='subtitle'>{t.prizeHeading}</div>
+          <div className='prize-grid'>
+            <div className='prize-card'>
+              <h3>{t.eduTitle}</h3>
+              <ul className='prize-list'>
+                {educationList?.map((item, index) => (
+                  <li key={`edu-${index}`}>{item?.[lang] ?? item?.kr ?? item?.en ?? ''}</li>
+                ))}
+              </ul>
+            </div>
+            <div className='prize-card'>
+              <h3>{t.awardTitle}</h3>
+              <ul className='prize-list'>
+                {awardList?.map((item, index) => (
+                  <li key={`award-${index}`}>{item?.[lang] ?? item?.kr ?? item?.en ?? ''}</li>
+                ))}
+              </ul>
+            </div>
+            <div className='prize-card'>
+              <h3>{t.certTitle}</h3>
+              <ul className='prize-list'>
+                {certList?.map((item, index) => (
+                  <li key={`cert-${index}`}>{item?.[lang] ?? item?.kr ?? item?.en ?? ''}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className='contact'>
+          <div className='subtitle'>{t.contactHeading}</div>
+          <div className='exter-grid'>
+            <div
+              className='exter-card exter-card--portfolio'
+              onClick={() => alert(lang === 'ko' ? '?? ? ???' : 'Coming soon')}
+            >
+              <div className='exter-card-title'>{t.portfolioTitle}</div>
+              <div className='exter-card-desc'>{t.portfolioDesc}</div>
+            </div>
+            <div
+              className='exter-card exter-card--blog'
+              onClick={() => alert(lang === 'ko' ? '?? ? ???' : 'Coming soon')}
+            >
+              <div className='exter-card-title'>{t.blogTitle}</div>
+              <div className='exter-card-desc'>{t.blogDesc}</div>
+            </div>
+          </div>
+          <div className={`contact-dock dock-appear ${heroVisible ? 'dock-visible' : ''}`}>
+            <Dock 
+              items={snsItems}
+              panelHeight={56}
+              baseItemSize={40}
+              magnification={60}
+              distance={160}
+              lockHeight
+            />
+          </div>
+        </section>
 
       {/*
       <section id="project" className="projects-section">
@@ -174,123 +287,8 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
       </section>
       */}
 
-      <section id="prizes" className="prizes">
-        <div className="prizes-wrap">
-          <nav className="prize-tabs" role="tablist" aria-label="Profile tabs">
-            <button
-              className={`tab ${activeTab === 'education' ? 'active' : ''}`}
-              onClick={() => setActiveTab('education')}
-              role="tab"
-              aria-selected={activeTab === 'education'}
-            >
-              학력·이수
-            </button>
-            <button
-              className={`tab ${activeTab === 'awards' ? 'active' : ''}`}
-              onClick={() => setActiveTab('awards')}
-              role="tab"
-              aria-selected={activeTab === 'awards'}
-            >
-              수상 경력
-            </button>
-            <button
-              className={`tab ${activeTab === 'cert' ? 'active' : ''}`}
-              onClick={() => setActiveTab('cert')}
-              role="tab"
-              aria-selected={activeTab === 'cert'}
-            >
-              자격·기타
-            </button>
-          </nav>
+      
 
-          <div className="prize-panels">
-            <div id="tab-education" className={`panel ${activeTab === 'education' ? 'active' : ''}`} role="tabpanel">
-              <AnimatedList
-                items={educationList}
-                displayScrollbar={false}
-                showGradients={false}
-                enableArrowNavigation={false}
-              />
-            </div>
-
-            <div id="tab-awards" className={`panel ${activeTab === 'awards' ? 'active' : ''}`} role="tabpanel">
-              <AnimatedList
-                items={awardList}
-                displayScrollbar={false}
-                showGradients={false}
-                enableArrowNavigation={false}
-              />
-            </div>
-
-            <div id="tab-cert-other" className={`panel ${activeTab === 'cert' ? 'active' : ''}`} role="tabpanel">
-              <AnimatedList
-                items={certList}
-                displayScrollbar={false}
-                showGradients={false}
-                enableArrowNavigation={false}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {selectedProject && (
-        <div className="project-modal" role="dialog" aria-modal="true">
-          <div className="project-modal__backdrop" onClick={() => setSelectedProjectIndex(null)} />
-          <div className="project-modal__content">
-            <button className="project-modal__close" onClick={() => setSelectedProjectIndex(null)} aria-label="Close modal">×</button>
-            {featuredProjects.length > 1 && (
-              <>
-                <button
-                  className="project-modal__nav project-modal__nav--prev"
-                  onClick={() => goToProject(-1)}
-                  aria-label="Previous project"
-                >
-                  {'<'}
-                </button>
-                <button
-                  className="project-modal__nav project-modal__nav--next"
-                  onClick={() => goToProject(1)}
-                  aria-label="Next project"
-                >
-                  {'>'}
-                </button>
-              </>
-            )}
-            <div className="project-modal__header">
-              <div>
-                <p className="project-modal__eyebrow">Software Project</p>
-                <h2>{selectedProject.title}</h2>
-                <p className="project-modal__description">{selectedProject.description}</p>
-                <div className="project-tags modal-tags">
-                  {projectTechs(selectedProject).map((tag) => (
-                    <span className="project-tag" key={tag}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-              <div className="project-modal__thumb">
-                <img src={(selectedProject.detailImages && selectedProject.detailImages[0]) || selectedProject.image} alt={selectedProject.title} />
-              </div>
-            </div>
-
-            {selectedProject.details && <p className="project-modal__details">{selectedProject.details}</p>}
-
-            {selectedProject.detailImages && selectedProject.detailImages.length > 0 && (
-              <div className="project-modal__images">
-                {selectedProject.detailImages.map((src) => (
-                  <img src={src} alt={`${selectedProject.title} detail`} key={src} />
-                ))}
-              </div>
-            )}
-
-            {selectedProject.url && (
-              <a className="btn" href={selectedProject.url} target="_blank" rel="noreferrer">
-                프로젝트 보기
-              </a>
-            )}
-          </div>
-        </div>
-      )}
     </>
   )
 }

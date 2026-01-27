@@ -1,28 +1,92 @@
 {
   "educationList": [
-    "덕소중학교 졸업 (2024)",
-    "단국대학교부속소프트웨어고등학교 재학 (6기)",
-    "구리·남양주교육지원청 도농발명교육센터 수료",
-    "KAIST IP 영재기업인교육원 14기 수료",
-    "청소년 발명기자단 16~17기 활동"
+    {
+      "kr": "덕소중학교 졸업 (2024)",
+      "en": "Graduated from Deokso Middle School (2024)"
+    },
+    {
+      "kr": "단국대학교부속소프트웨어고등학교 재학 (6기)",
+      "en": "Student at Dankook University Software High School (6th)"
+    },
+    {
+      "kr": "구리·남양주교육지원청 도농발명교육센터 수료",
+      "en": "Completed the Urban–Rural Invention Education Center Program, Guri–Namyangju Office of Education"
+    },
+    {
+      "kr": "KAIST IP 영재기업인교육원 14기 수료",
+      "en": "Completed KAIST Center for Creative Entrepreneur (14th)"
+    },
+    {
+      "kr": "청소년 발명기자단 16~17기 활동",
+      "en": "Member of the Youth Invention Press Corps (16th–17th)"
+    }
   ],
   "awardList": [
-    "2020 구리·남양주교육지원청 학생과학발명품 경진대회 동상",
-    "2021 과학기술정보통신부장관 과학의 날 상",
-    "2021 경기도교육감 경기도학생과학발명품경진대회 우수상",
-    "2022 구리남양주교육지원청 학생과학발명품경진대회 금상",
-    "2022 한국과학교육단체총연합회 한국과학창의력대회 동상",
-    "2022 한국발명진흥회·특허청 YIP 청소년 발명가 프로그램 수료 및 장려상",
-    "2023 KAIST IP 영재기업인 교육원 7월 집중교육 미래기술 팀프로젝트 우수상",
-    "2025 아산유스프러너 데모데이 피칭 부분 우수상",
-    "2025 아산유스프러너 데모데이 부스 부분 장려상",
-    "한양대와 함께하는 2025 전국 청소년 오픈SW GAME 코딩대회 우수상",
-    "2025 단대소고 생활안전앱 챌린지 최우수상"
+    {
+      "kr": "2020 구리·남양주교육지원청 학생과학발명품 경진대회 동상",
+      "en": "Bronze Prize, Guri–Namyangju Student Science Invention Competition (2020)"
+    },
+    {
+      "kr": "2021 과학기술정보통신부장관 과학의 날 상",
+      "en": "Minister of Science and ICT Award – Science Day (2021)"
+    },
+    {
+      "kr": "2021 경기도교육감 경기도학생과학발명품경진대회 우수상",
+      "en": "Excellence Award, Gyeonggi Student Science Invention Competition (Superintendent of Education Award, 2021)"
+    },
+    {
+      "kr": "2022 구리남양주교육지원청 학생과학발명품경진대회 금상",
+      "en": "Gold Prize, Guri–Namyangju Student Science Invention Competition (2022)"
+    },
+    {
+      "kr": "2022 한국과학교육단체총연합회 한국과학창의력대회 동상",
+      "en": "Bronze Prize, Korea Science Creativity Competition (KOFAC, 2022)"
+    },
+    {
+      "kr": "2022 한국발명진흥회·특허청 YIP 청소년 발명가 프로그램 수료 및 장려상",
+      "en": "Completed YIP Youth Inventor Program & Encouragement Award (KIPO & KIPA, 2022)"
+    },
+    {
+      "kr": "2023 KAIST IP 영재기업인 교육원 7월 집중교육 미래기술 팀프로젝트 우수상",
+      "en": "Excellence Award, Future Technology Team Project, KAIST IP Academy Intensive Program (July 2023)"
+    },
+    {
+      "kr": "2025 아산유스프러너 데모데이 피칭 부문 우수상",
+      "en": "Excellence Award, Pitching Category, Asan Youth Entrepreneur Demo Day (2025)"
+    },
+    {
+      "kr": "2025 아산유스프러너 데모데이 부스 부문 장려상",
+      "en": "Encouragement Award, Booth Category, Asan Youth Entrepreneur Demo Day (2025)"
+    },
+    {
+      "kr": "2025 한양대와 함께하는 전국 청소년 오픈SW GAME 코딩대회 우수상",
+      "en": "Excellence Award, National Youth Open SW Game Coding Competition hosted by Hanyang University (2025)"
+    },
+    {
+      "kr": "2025 단대소고 생활안전앱 챌린지 최우수상 (1위)",
+      "en": "Grand Prize (1st Place), DKSH School Safety App Challenge (2025)"
+    }
   ],
   "certList": [
-    "Cos Pro Python 1급",
-    "트리즈 전문가 1수준",
-    "특허 출원 11건, 특허 등록 1건",
-    "2023 KAIST IP 영재기업인교육원 글로벌 기업가정신 연수 참가"
+    {
+      "kr": "COS Pro Python 1급, 2급",
+      "en": "COS Pro Python Level 1 & 2"
+    },
+    {
+      "kr": "트리즈(TRIZ) 전문가 1수준",
+      "en": "TRIZ Specialist Level 1"
+    },
+    {
+      "kr": "특허 출원 11건, 특허 등록 1건",
+      "en": "11 Patent Applications, 1 Registered Patent"
+    },
+    {
+      "kr": "2023 KAIST IP-CEO 글로벌 기업가정신 연수 참가",
+      "en": "Participant, KAIST IP-CEO Global Entrepreneurship Program (2023)"
+    },
+    {
+      "kr": "ESSENTIA Science 정보통신부장",
+      "en": "Director of Information & Communications, ESSENTIA Science"
+    }
   ]
 }

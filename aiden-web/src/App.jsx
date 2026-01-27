@@ -1,4 +1,4 @@
-import { Suspense, useEffect, lazy } from 'react'
+import { Suspense, useEffect, lazy, useState } from 'react'
 import {Outlet,Route,Routes,useLocation,useNavigate,} from 'react-router-dom'
 import './App.css'
 import GlobalClickSpark from './component/ClickSpark.jsx'
@@ -132,6 +132,11 @@ function useParticles(containerId) {
 function Layout() {
   const navigate = useNavigate()
   const location = useLocation()
+  const [lang, setLang] = useState('ko')
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
   const handleContact = () => {
     if (location.pathname === '/') {
       document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
@@ -140,12 +145,19 @@ function Layout() {
     navigate('/', { state: { scrollTo: 'contact' } })
   }
 
+  const footerText =
+    lang === 'ko'
+      ? '© 2026 Aidengoldkr. All rights reserved.'
+      : '© 2026 Aidengoldkr. All rights reserved.'
+
+  const toggleLang = () => setLang(prev => (prev === 'ko' ? 'en' : 'ko'))
+
   return (
     <>
       <main className="page-shell">
-        <Outlet />
+        <Outlet context={{ lang, toggleLang }} />
       </main>
-      <footer>&copy; 2025 김건우. All rights reserved.</footer>
+      <footer>{footerText}</footer>
     </>
   )
 }
