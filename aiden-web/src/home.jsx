@@ -4,6 +4,7 @@ import LogoLoop from './component/LogoLoop.jsx'
 import TextType from './component/textType.jsx'
 import Dock from './component/Dock.jsx';
 import AnimatedList from './component/AnimatedList.jsx';
+import './home.css'
 
 
 
@@ -234,14 +235,14 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
           <div className='exter-grid'>
             <div
               className='exter-card exter-card--portfolio'
-              onClick={() => alert(lang === 'ko' ? '준비 중 입니다' : 'Coming soon')}
+              onClick={() => navigate("/portfolio")}
             >
               <div className='exter-card-title'>{t.portfolioTitle}</div>
               <div className='exter-card-desc'>{t.portfolioDesc}</div>
             </div>
             <div
               className='exter-card exter-card--blog'
-              onClick={() => alert(lang === 'ko' ? '준비 중 입니다' : 'Coming soon')}
+              onClick={() => navigate("https://blog.aidengoldkr.dev/")}
             >
               <div className='exter-card-title'>{t.blogTitle}</div>
               <div className='exter-card-desc'>{t.blogDesc}</div>

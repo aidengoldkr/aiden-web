@@ -6,6 +6,7 @@ import projectData from './data/projects.json'
 import prizes from './data/prizes.json'
 
 const Home = lazy(() => import('./home.jsx'))
+const Portfolio = lazy(() => import('./portfolio.jsx'))
 
 const particlesConfig = {
   particles: {
@@ -185,6 +186,9 @@ function App() {
               </Suspense>
             )}
           />
+          <Route
+            path='/portfolio'
+            element={(<Portfolio/>)} />
         </Route>
       </Routes>
     </>
