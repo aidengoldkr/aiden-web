@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+﻿import { useMemo } from 'react'
 import projects from './data/projects.json'
 import './portfolio.css'
 
@@ -48,29 +48,31 @@ function Portfolio () {
 
     return (
         <>
-            <div className='main-title'>
-                <h1>Portfolio</h1>
-                <p className='desc'>완료 및 진행 중인 프로젝트와 결과물들 입니다.</p>
-            </div>
-            <div className='project-grid'>
-                {CATEGORY_ORDER.map((category) => {
-                    const list = projectsByCategory[category.key] || []
-                    return (
-                        <section key={category.key} className={`${category.key}-grid`}>
-                            <h2 className='category-title'>{category.label}</h2>
-                            <div className='card-grid'>
-                                {list.length === 0 ? (
-                                    <p className='empty'>No projects yet.</p>
-                                ) : (
-                                    list.map((project) => (
-                                        <ProjectCard key={project.id} project={project} />
-                                    ))
-                                )}
-                            </div>
-                        </section>
-                    )
-                })}
-            </div>
+            <section className='portfolio-page'>
+                <div className='main-title'>
+                    <h1>Portfolio</h1>
+                    <p className='desc'>완료 및 진행 중인 프로젝트와 결과물들 입니다.</p>
+                </div>
+                <div className='project-grid'>
+                    {CATEGORY_ORDER.map((category) => {
+                        const list = projectsByCategory[category.key] || []
+                        return (
+                            <section key={category.key} className={`${category.key}-grid`}>
+                                <h2 className='category-title'>{category.label}</h2>
+                                <div className='card-grid'>
+                                    {list.length === 0 ? (
+                                        <p className='empty'>No projects yet.</p>
+                                    ) : (
+                                        list.map((project) => (
+                                            <ProjectCard key={project.id} project={project} />
+                                        ))
+                                    )}
+                                </div>
+                            </section>
+                        )
+                    })}
+                </div>
+            </section>
         </>
     )
 }
