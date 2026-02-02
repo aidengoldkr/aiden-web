@@ -235,7 +235,8 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
           <div className='exter-grid'>
             <div
               className='exter-card exter-card--portfolio'
-              onClick={() => navigate("/portfolio")}
+              onClick={() => {window.scrollTo({ top: 0, behavior: "instant" });
+																								navigate("/portfolio")}}
             >
               <div className='exter-card-title'>{t.portfolioTitle}</div>
               <div className='exter-card-desc'>{t.portfolioDesc}</div>
