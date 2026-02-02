@@ -322,11 +322,11 @@ body {
   font-weight: 500;
 }
 
-.exter-card--portfolio:hover {
+.exter-card--portfolio {
   background: linear-gradient(135deg, rgba(0, 255, 208, 0.22), rgba(0, 160, 255, 0.22));
 }
 
-.exter-card--blog:hover {
+.exter-card--blog {
   background: linear-gradient(135deg, rgba(255, 105, 180, 0.25), rgba(255, 215, 0, 0.22));
 }
 
