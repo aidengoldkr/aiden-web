@@ -1,22 +1,53 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+
+    <!-- 기본 SEO -->
+    <title>Aidengoldkr | Innovative Coding</title>
+    <meta
+      name="description"
+      content="Personal Branding Page of Aidengoldkr"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>aiden-web</title>
+    <meta name="theme-color" content="#020617" />
+    <link rel="canonical" href="https://www.aidengoldkr.dev/" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aidengoldkr | Innovative Coding" />
+    <meta
+      property="og:description"
+      content="Personal Branding Page of Aidengoldkr"
+    />
+    <meta property="og:url" content="https://www.aidengoldkr.dev" />
+    <meta property="og:site_name" content="Aidengoldkr" />
+    <meta property="og:locale" content="ko_KR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aidengoldkr | Innovative Coding" />
+    <meta
+      name="twitter:description"
+      content="Personal Branding Page of Aidengoldkr"
+    />
   </head>
+
   <body>
     <script>
       (function () {
         var params = new URLSearchParams(window.location.search)
-        var redirect = params.get('redirect')
+        var redirect = params.get("redirect")
         if (redirect) {
           var decoded = decodeURIComponent(redirect)
-          window.history.replaceState(null, '', decoded)
+          window.history.replaceState(null, "", decoded)
         }
       })()
     </script>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
