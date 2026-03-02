@@ -4,11 +4,12 @@ import projects from './data/projects.json'
 import './portfolio.css'
 
 const CATEGORY_ORDER = [
+    { key: 'saas', label: 'SaaS' },
     { key: 'web', label: 'Web' },
     { key: 'sw', label: 'Software' },
 ]
 
-function ProjectCard ({ project }) {
+function ProjectCard({ project }) {
     const { title, description, tech, image, url, date } = project
 
     return (
@@ -37,7 +38,7 @@ function ProjectCard ({ project }) {
     )
 }
 
-function Portfolio () {
+function Portfolio() {
     const navigate = useNavigate()
     const projectsByCategory = useMemo(() => {
         return projects.reduce((acc, project) => {
