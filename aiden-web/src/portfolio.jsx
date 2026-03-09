@@ -1,4 +1,4 @@
-﻿import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import projects from './data/projects.json'
 import './portfolio.css'
@@ -40,6 +40,11 @@ function ProjectCard({ project }) {
 
 function Portfolio() {
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     const projectsByCategory = useMemo(() => {
         return projects.reduce((acc, project) => {
             const key = project.category || 'other'
@@ -52,7 +57,11 @@ function Portfolio() {
     return (
         <>
             <section className='portfolio-page'>
-                <div className='portfolio-topbar'>
+                <div className='main-title'>
+                    <div className='main-title-text'>
+                        <h1>Portfolio</h1>
+                        <p className='desc'>완료 및 진행 중인 프로젝트와 결과물들 입니다.</p>
+                    </div>
                     <button
                         className='back-home'
                         type='button'
@@ -61,10 +70,6 @@ function Portfolio() {
                     >
                         홈으로 돌아가기
                     </button>
-                </div>
-                <div className='main-title'>
-                    <h1>Portfolio</h1>
-                    <p className='desc'>완료 및 진행 중인 프로젝트와 결과물들 입니다.</p>
                 </div>
                 <div className='project-grid'>
                     {CATEGORY_ORDER.map((category) => {

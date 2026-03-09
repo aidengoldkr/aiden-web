@@ -1,11 +1,26 @@
-.portfolio-page .portfolio-topbar {
+.portfolio-page .main-title {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 32px 10% 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 90px 10% 30px;
+  text-align: left;
+  position: relative;
 }
 
-.portfolio-page .back-home {
+.portfolio-page .main-title-text {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-page .main-title h1,
+.portfolio-page .main-title .desc {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-page .main-title .back-home {
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -21,27 +36,15 @@
   transition: transform 0.2s ease, border 0.2s ease, background 0.2s ease;
 }
 
-.portfolio-page .back-home:hover {
+.portfolio-page .main-title .back-home:hover {
   transform: translateY(-1px);
   border-color: rgba(255, 255, 255, 0.32);
   background: rgba(255, 255, 255, 0.12);
 }
 
-.portfolio-page .back-home:focus-visible {
+.portfolio-page .main-title .back-home:focus-visible {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
-}
-
-.portfolio-page .main-title {
-  padding: 90px 10% 30px;
-  text-align: left;
-  position: relative;
-}
-
-.portfolio-page .main-title h1,
-.portfolio-page .main-title .desc {
-  position: relative;
-  z-index: 1;
 }
 
 .portfolio-page .main-title h1 {
@@ -71,14 +74,14 @@
 
 .portfolio-page .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 320px));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
 }
 
 .portfolio-page .project-card {
   background: linear-gradient(160deg, rgba(22, 23, 37, 0.95), rgba(10, 12, 22, 0.95));
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  border-radius: 18px;
   overflow: hidden;
   text-align: left;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
@@ -113,22 +116,22 @@
 }
 
 .portfolio-page .card-body {
-  padding: 12px 14px 14px;
+  padding: 18px 18px 20px;
   display: grid;
-  gap: 8px;
+  gap: 10px;
 }
 
 .portfolio-page .card-title {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--text-color);
 }
 
 .portfolio-page .card-desc {
   color: var(--card-text);
-  font-size: 13px;
-  line-height: 1.5;
-  min-height: 40px;
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 48px;
 }
 
 .portfolio-page .card-date {
@@ -140,17 +143,17 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
   padding: 0;
-  margin: 2px 0 4px;
+  margin: 4px 0 6px;
 }
 
 .portfolio-page .card-tech li {
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--text-color);
 }
 
@@ -158,10 +161,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
+  height: 36px;
   border-radius: 999px;
-  padding: 0 14px;
-  font-size: 13px;
+  padding: 0 16px;
   color: #001a14;
   font-weight: 700;
   background: var(--primary);
@@ -198,11 +200,6 @@
 }
 
 @media (max-width: 600px) {
-  .portfolio-page .portfolio-topbar {
-    padding: 24px 8% 0;
-    justify-content: center;
-  }
-
   .portfolio-page .main-hero {
     padding-top: 70px;
     padding-bottom: 20px;

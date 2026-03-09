@@ -1,19 +1,5 @@
 [
-  {
-    "id": "actonix",
-    "title": "Actonix",
-    "category": "saas",
-    "description": "이미지, PDF, 메모만 입력하면 마감일 · 우선순위 · TO-DO · 캘린더까지 한 번에 정리해주는 SaaS 애플리케이션",
-    "tech": [
-      "Next.js",
-      "Supabase",
-      "OpenAI"
-    ],
-    "image": "asset/actonix.png",
-    "date": "2026-02-20",
-    "url": "https://actonixes.com",
-    "details": "이미지, PDF, 메모만 입력하면 마감일 · 우선순위 · TO-DO · 캘린더까지 한 번에 정리해주는 SaaS 애플리케이션입니다."
-  },
+  
   {
     "id": "bike-bot",
     "title": "따릉이 길찾기 챗봇",
@@ -55,6 +41,21 @@
     "url": null,
     "details": "아이를 찾아 숲속으로 들어간 소녀, 그리고 그녀의 마법 정령들 | Pygame기반 판타지 전략 디펜스 게임 Witch 입니다. 총 3명의 팀원과 함께 여름방학동안 진행한 프로젝트로 저는 전체 파이프라인 관리와 Git 형상관리, 데이터 구조화를 주로 맡았습니다.",
     "date": "2025-09-08"
+  },
+  {
+    "id": "vertex-web",
+    "title": "VERTEX 동아리 홈페이지",
+    "category": "web",
+    "description": "단대소고 디지털융합제품개발부 VERTEX 공식 홈페이지",
+    "tech": [
+      "Next.js",
+      "Supabase",
+      "Figma"
+    ],
+    "image": "asset/vertex.png",
+    "url": "https://vertex-dksh.org",
+    "details": "단대소고 디지털융합제품개발부 VERTEX 공식 홈페이지를 제작했습니다. Figma를 통해 디자인을 작업하고, Next.js 프레임워크를 사용하여 제작했습니다",
+    "date": "2026-03-10"
   },
   {
     "id": "icaros",
@@ -124,6 +125,6 @@
     "image": "asset/aiden.png",
     "url": "https://aidengoldkr.dev",
     "details": "제 자신을 소개하는 퍼스널 브랜딩 포트폴리오 사이트 입니다. 제 자신의 비전과 꿈을 강조하면서 내용을 구성하였고, 프로젝트나 수상실적 같은 데이터는 외부 JSON을 관리 하였습니다.",
-    "date": null
+    "date": "-"
   }
 ]

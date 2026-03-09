@@ -1,0 +1,10 @@
+{
+	"credit": "Created by Stridey",
+	"parent": "item/waxed_copper_trapdoor",
+	"textures": {
+		"particle": "item/waxed_weathered_copper_trapdoor",
+		"front": "item/waxed_weathered_copper_trapdoor",
+		"sides": "item/waxed_weathered_copper_trapdoor_side",
+		"sides_inner": "item/weathered_copper_door_sides"
+	}
+}
