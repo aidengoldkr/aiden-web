@@ -1,5 +1,20 @@
 [
-  
+  {
+    "id": "todit",
+    "title": "투딧 | ToDit",
+    "category": "saas",
+    "description": "과제, 문서, 공지 이미지를 분석해 해야 할 일을 단계별로 정리해주는 AI SaaS",
+    "tech": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Supabase"
+    ],
+    "image": "asset/todit.png",
+    "date": "2026-03-14",
+    "url": "https://todit.app",
+    "details": "ToDit은 공지문 이미지를 입력하면 실행 가능한 To-Do로 자동 변환하는 서비스 입니다."
+  },
   {
     "id": "bike-bot",
     "title": "따릉이 길찾기 챗봇",
