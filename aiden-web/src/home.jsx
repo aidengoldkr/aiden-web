@@ -183,6 +183,7 @@ function Home({ useParticlesHook, projectData, skillData, educationList, awardLi
                 <a className='mbti-tag'># INTJ</a>
                 <a href="https://dankook.sen.hs.kr/index.do" className='school-tag' target="_blank" rel="noreferrer"># DKSH 6th</a>
                 <a href="https://ipceo.kaist.ac.kr/" className='ipceo-tag' target="_blank" rel="noreferrer"># IP-CEO 14th</a>
+                <a href="https://swmaestro.ai/sw/main/main.do" className='ipceo-tag' target="_blank" rel="noreferrer"># ASM 17th</a>
               </div>
             </div>
           </div>
