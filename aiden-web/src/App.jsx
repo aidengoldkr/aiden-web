@@ -1,5 +1,5 @@
 import { Suspense, useEffect, lazy, useState } from 'react'
-import {Outlet,Route,Routes,useLocation,useNavigate,} from 'react-router-dom'
+import { Outlet, Route, Routes, useLocation, useNavigate, } from 'react-router-dom'
 import './App.css'
 import GlobalClickSpark from './component/ClickSpark.jsx'
 import projectData from './data/projects.json'
@@ -7,6 +7,7 @@ import prizes from './data/prizes.json'
 
 const Home = lazy(() => import('./home.jsx'))
 const Portfolio = lazy(() => import('./portfolio.jsx'))
+const Math = lazy(() => import('./math.jsx'))
 
 const particlesConfig = {
   particles: {
@@ -188,8 +189,9 @@ function App() {
           />
           <Route
             path='/portfolio'
-            element={(<Portfolio/>)} />
+            element={(<Portfolio />)} />
         </Route>
+        <Route path="/math" element={<Math />} />
       </Routes>
     </>
   )
